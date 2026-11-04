@@ -1,0 +1,137 @@
+@use '../tokens' as t;
+
+.hero {
+  overflow: hidden;
+
+  &__grid {
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+    padding-block: var(--space-7) var(--space-8);
+
+    @include t.mq('lg') {
+      grid-template-columns: 1.1fr 1fr;
+      gap: var(--space-7);
+      padding-block: var(--space-8);
+    }
+  }
+
+  &__title {
+    font-size: var(--text-3xl);
+    line-height: 1.02;
+
+    em {
+      color: var(--color-teal-dark);
+      font-style: normal;
+    }
+  }
+
+  &__lead {
+    max-width: 34rem;
+    margin-top: var(--space-5);
+    font-size: var(--text-lg);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+
+    .button {
+      flex: 1 1 100%;
+
+      @include t.mq('sm') {
+        flex: 0 1 auto;
+      }
+    }
+  }
+
+  &__art {
+    position: relative;
+    width: min(100%, 34rem);
+    margin-inline: auto;
+    aspect-ratio: 1.05;
+  }
+
+  &__blob {
+    position: absolute;
+    inset: 6% 2% 2%;
+    border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
+    background: var(--color-teal-pale);
+  }
+
+  &__pouch {
+    position: absolute;
+    width: 44%;
+
+    &--1 {
+      top: 14%;
+      left: 2%;
+      transform: rotate(-9deg);
+    }
+
+    &--2 {
+      top: 14%;
+      right: 2%;
+      transform: rotate(9deg);
+    }
+
+    &--3 {
+      top: 6%;
+      left: 26%;
+      z-index: 1;
+      width: 48%;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color-red);
+    color: #fff;
+    font-family: var(--font-display);
+    line-height: 1.05;
+    text-align: center;
+    transform: rotate(-8deg);
+
+    strong {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+      font-weight: 700;
+    }
+
+    span {
+      padding-inline: 8%;
+      font-size: clamp(0.75rem, 2.2vw, 0.9375rem);
+      font-weight: 500;
+    }
+  }
+}
+
+.trust-strip {
+  border-block: 1px solid rgb(18 52 59 / 12%);
+  background: var(--color-kraft-pale);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3) var(--space-5);
+    padding-block: var(--space-4);
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 500;
+
+    @include t.mq('lg') {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-base);
+    }
+  }
+}

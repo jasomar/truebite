@@ -1,0 +1,30 @@
+@use '../tokens' as t;
+
+.sticky-cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom));
+  background: rgb(251 246 236 / 95%);
+  box-shadow: 0 -8px 24px -16px rgb(18 52 59 / 40%);
+  transition:
+    transform 0.25s var(--ease-out),
+    visibility 0.25s;
+
+  &.is-hidden {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+
+  @include t.mq('md') {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta {
+    transition: none;
+  }
+}

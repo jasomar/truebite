@@ -1,0 +1,27 @@
+.pouch {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 16px 18px rgb(18 52 59 / 22%));
+
+  text {
+    fill: #fff;
+    font-family: var(--font-display);
+  }
+
+  &__brand {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__meta {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+}

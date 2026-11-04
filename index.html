@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es-CR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>True Bite | Premios deshidratados para perros y gatos en Costa Rica</title>
+    <meta name="description" content="Hígado y pechuga deshidratados, 100% proteína y sin conservantes artificiales. Hechos en Costa Rica. El 15% de cada compra va a Rescate Animal Ara. Pedí por WhatsApp.">
+    <meta name="theme-color" content="#FBF6EC">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CR">
+    <meta property="og:title" content="True Bite | Premios deshidratados para mascotas">
+    <meta property="og:description" content="100% proteína, hechos en Costa Rica. El 15% de cada compra va a Rescate Animal Ara.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <!-- @json-ld -->
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#inicio" aria-label="True Bite, ir al inicio">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="16" fill="#0E5F70"/>
+            <g fill="#FBF6EC">
+              <ellipse cx="16" cy="20.5" rx="6.5" ry="5.5"/>
+              <ellipse cx="8.5" cy="15" rx="2.5" ry="3.2"/>
+              <ellipse cx="13" cy="9.8" rx="2.5" ry="3.4"/>
+              <ellipse cx="19" cy="9.8" rx="2.5" ry="3.4"/>
+              <ellipse cx="23.5" cy="15" rx="2.5" ry="3.2"/>
+            </g>
+          </svg>
+          <span class="brand__name">True Bite</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú" data-nav-toggle hidden>
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#causa">La causa</a></li>
+            <li><a href="#preguntas">Preguntas</a></li>
+          </ul>
+          <a class="button button--primary button--small" href="{{whatsapp-url}}" target="_blank" rel="noopener">
+            <!-- @whatsapp-icon --><span>Pedir</span>
+          </a>
+        </nav>
+
+        <button class="button button--ghost button--small site-header__account" type="button" data-auth-open="login" hidden>Ingresar</button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Hechos en Costa Rica, para perros y gatos</p>
+            <h1 class="hero__title" id="hero-title">Premios <em>100% proteína</em> que dan ganas de portarse bien</h1>
+            <p class="hero__lead">Hígado y pechuga deshidratados, sin conservantes artificiales. Y cada compra ayuda: el 15% va a {{cause-name}}.</p>
+            <div class="hero__actions" data-primary-cta>
+              <a class="button button--primary button--large" href="{{whatsapp-url}}" target="_blank" rel="noopener">
+                <!-- @whatsapp-icon --><span>Pedí por WhatsApp</span>
+              </a>
+              <a class="button button--ghost button--large" href="#productos">Ver productos</a>
+            </div>
+          </div>
+          <div class="hero__art" aria-hidden="true">
+            <div class="hero__blob"></div>
+            <!-- @hero-pouches -->
+            <div class="hero__badge"><strong>15%</strong><span>para el rescate</span></div>
+          </div>
+        </div>
+        <div class="trust-strip">
+          <ul class="container trust-strip__list">
+            <li>100% proteína</li>
+            <li>Sin conservantes artificiales</li>
+            <li>No requiere refrigeración</li>
+            <li>Hecho en Costa Rica</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section products" id="productos" aria-labelledby="products-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow">Productos</p>
+            <h2 class="section-head__title" id="products-title">Tres sabores, 60 gramos de felicidad</h2>
+            <p class="section-head__lead">Elegí uno y el botón te abre WhatsApp con el pedido ya escrito.</p>
+          </header>
+          <ul class="products__grid">
+            <!-- @product-cards -->
+          </ul>
+          <p class="legal-note">Precios en colones costarricenses. Si hay costo de envío, te lo confirmamos por WhatsApp antes de pagar. Las imágenes son ilustrativas. Al hacer un pedido aceptás los <a href="/terminos.html">Términos y condiciones</a>.</p>
+        </div>
+      </section>
+
+      <section class="section benefits" id="beneficios" aria-labelledby="benefits-title">
+        <div class="container benefits__layout">
+          <div class="benefits__aside">
+            <div class="benefits__intro">
+              <p class="eyebrow">Beneficios</p>
+              <h2 class="section-head__title" id="benefits-title">Lo que dice la etiqueta, sin letra pequeña</h2>
+            </div>
+            <div class="benefits__stage" aria-hidden="true">
+              <!-- @benefit-stage -->
+            </div>
+            <div class="benefits__progress" aria-hidden="true" data-benefits-progress hidden>
+              <p class="benefits__counter" data-benefits-counter></p>
+              <div class="benefits__track"><span class="benefits__bar" data-benefits-bar></span></div>
+            </div>
+          </div>
+          <ol class="benefits__list">
+            <!-- @benefit-items -->
+          </ol>
+          <p class="legal-note">Información según la etiqueta. Fotos genéricas de referencia. Los premios no sustituyen la recomendación de tu veterinario.</p>
+        </div>
+      </section>
+
+      <section class="section cause" id="causa" aria-labelledby="cause-title">
+        <div class="container cause__grid">
+          <p class="cause__number" aria-hidden="true" data-reveal>15%</p>
+          <div class="cause__copy" data-reveal>
+            <p class="eyebrow">La causa</p>
+            <h2 class="section-head__title" id="cause-title">El 15% de cada compra va a {{cause-name}}</h2>
+            <p>Tu mascota recibe un premio y un perrito rescatado recibe ayuda. No tenés que hacer nada extra: la donación sale de cada compra.</p>
+            <a class="text-link" href="{{cause-url}}" target="_blank" rel="noopener">Conocé a {{cause-name}}</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section order" id="pedir" aria-labelledby="order-title">
+        <div class="container order__grid">
+          <div data-reveal>
+            <p class="eyebrow">Cómo pedir</p>
+            <h2 class="section-head__title" id="order-title">Tres pasos, sin carrito ni registro</h2>
+            <ol class="steps">
+              <li><span><strong>Elegí tu sabor.</strong> Uno, dos o los tres.</span></li>
+              <li><span><strong>Escribinos por WhatsApp.</strong> Al {{whatsapp-display}}.</span></li>
+              <li><span><strong>Coordinamos la entrega.</strong> En Moravia, Escazú o por Correos de Costa Rica.</span></li>
+            </ol>
+          </div>
+          <div class="faq" id="preguntas" data-reveal>
+            <h2 class="faq__title">Preguntas frecuentes</h2>
+            <details class="faq__item">
+              <summary>¿Sirven para perros y gatos?</summary>
+              <p>Sí. Los tres premios son para perro o gato.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Tengo que refrigerarlos?</summary>
+              <p>No. Guardalos en un lugar fresco.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿A dónde hacen entregas?</summary>
+              <p>Entregamos en Moravia y Escazú, y enviamos por Correos de Costa Rica. El detalle se coordina por WhatsApp.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Cómo funciona la donación?</summary>
+              <p>El 15% de cada compra va a {{cause-name}}. No pagás nada adicional.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title" data-primary-cta>
+        <div class="container closing__inner" data-reveal>
+          <h2 class="closing__title" id="closing-title">Tu mascota ya sabe lo que quiere</h2>
+          <div class="closing__actions">
+            <a class="button button--light button--large" href="{{whatsapp-url}}" target="_blank" rel="noopener">
+              <!-- @whatsapp-icon --><span>Pedí por WhatsApp</span>
+            </a>
+            <button class="button button--outline-light button--large" type="button" data-auth-open="register" hidden>Crear cuenta</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @site-footer -->
+
+    <div class="sticky-cta is-hidden" data-sticky-cta>
+      <a class="button button--primary button--block" href="{{whatsapp-url}}" target="_blank" rel="noopener">
+        <!-- @whatsapp-icon --><span>Pedí por WhatsApp</span>
+      </a>
+    </div>
+
+    <dialog class="auth-modal" aria-labelledby="auth-login-title" data-auth-modal>
+      <div class="auth-modal__panel">
+        <button class="auth-modal__close" type="button" aria-label="Cerrar" data-auth-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+
+        <form class="auth-form" novalidate data-auth-form="login">
+          <h2 class="auth-form__title" id="auth-login-title">Iniciá sesión</h2>
+          <div class="field">
+            <label for="login-email">Correo electrónico</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="login-email-error">
+            <p class="field__error" id="login-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="login-password">Contraseña</label>
+            <div class="field__password">
+              <input id="login-password" name="password" type="password" autocomplete="current-password" required aria-describedby="login-password-error">
+              <button class="field__toggle" type="button" aria-controls="login-password" aria-pressed="false" data-password-toggle>Mostrar</button>
+            </div>
+            <p class="field__error" id="login-password-error" hidden></p>
+          </div>
+          <p class="auth-form__message" role="alert" data-auth-message hidden></p>
+          <button class="button button--primary button--block" type="submit" data-auth-submit>Iniciar sesión</button>
+          <p class="auth-form__notice">Tus datos se usan solo para darte acceso a tu cuenta. <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</p>
+          <p class="auth-form__switch">¿No tenés cuenta? <button type="button" data-auth-switch="register">Creá una</button></p>
+        </form>
+
+        <form class="auth-form" novalidate data-auth-form="register" hidden>
+          <h2 class="auth-form__title" id="auth-register-title">Creá tu cuenta</h2>
+          <div class="field">
+            <label for="register-name">Nombre</label>
+            <input id="register-name" name="name" type="text" autocomplete="name" required aria-describedby="register-name-error">
+            <p class="field__error" id="register-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="register-email">Correo electrónico</label>
+            <input id="register-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="register-email-error">
+            <p class="field__error" id="register-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="register-password">Contraseña</label>
+            <div class="field__password">
+              <input id="register-password" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="register-password-help register-password-error">
+              <button class="field__toggle" type="button" aria-controls="register-password" aria-pressed="false" data-password-toggle>Mostrar</button>
+            </div>
+            <p class="field__help" id="register-password-help">Mínimo 8 caracteres.</p>
+            <p class="field__error" id="register-password-error" hidden></p>
+          </div>
+          <p class="auth-form__notice">True Bite guardará estos datos en una base de datos para crear y administrar tu cuenta. Todos los campos son obligatorios: sin ellos no podemos crearla. Podés pedir acceso, corrección o supresión cuando quieras. Detalles, responsable y destinatarios en la <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</p>
+          <div class="field">
+            <label class="field__check" for="register-consent">
+              <input id="register-consent" name="consent" type="checkbox" required aria-describedby="register-consent-error">
+              <span>Soy mayor de edad, consiento el tratamiento de mis datos y acepto los <a href="/terminos.html" target="_blank" rel="noopener">Términos y condiciones</a>.</span>
+            </label>
+            <p class="field__error" id="register-consent-error" hidden></p>
+          </div>
+          <p class="auth-form__message" role="alert" data-auth-message hidden></p>
+          <button class="button button--primary button--block" type="submit" data-auth-submit>Crear cuenta</button>
+          <p class="auth-form__switch">¿Ya tenés cuenta? <button type="button" data-auth-switch="login">Iniciá sesión</button></p>
+        </form>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/ts/main.ts"></script>
+  </body>
+</html>

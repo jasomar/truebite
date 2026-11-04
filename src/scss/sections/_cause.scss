@@ -1,0 +1,43 @@
+@use '../tokens' as t;
+
+.cause {
+  background: var(--color-kraft-pale);
+
+  &__grid {
+    display: grid;
+    gap: var(--space-5);
+    align-items: center;
+
+    @include t.mq('lg') {
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-7);
+    }
+  }
+
+  &__number {
+    color: var(--color-red);
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 3rem + 18vw, 15rem);
+    font-weight: 700;
+    line-height: 0.9;
+  }
+
+  &__copy {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-4);
+    font-size: var(--text-lg);
+
+    .eyebrow {
+      margin: 0;
+      color: var(--color-teal-deep);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      color: var(--color-teal-deep);
+    }
+  }
+}
