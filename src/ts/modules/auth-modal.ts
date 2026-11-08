@@ -1,3 +1,4 @@
+import { site } from '../../data/site';
 import { login, register, type AuthResult } from '../services/auth';
 
 type AuthMode = 'login' | 'register';
@@ -49,6 +50,9 @@ const resetPasswordToggles = (form: HTMLFormElement): void => {
 };
 
 export const initAuthModal = (): void => {
+  // Los botones salen ocultos en el HTML; sin cuentas activas se quedan así.
+  if (!site.accountsEnabled) return;
+
   const modal = document.querySelector<HTMLDialogElement>('[data-auth-modal]');
   if (!modal) return;
 

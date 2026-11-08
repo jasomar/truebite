@@ -17,8 +17,9 @@
   }
 
   &__title {
+    max-width: 14ch;
     font-size: var(--text-3xl);
-    line-height: 1.02;
+    line-height: 1.04;
 
     em {
       color: var(--color-teal-dark);
@@ -51,48 +52,47 @@
     position: relative;
     width: min(100%, 34rem);
     margin-inline: auto;
-    aspect-ratio: 1.05;
+    aspect-ratio: 1.25;
   }
 
   &__blob {
     position: absolute;
-    inset: 6% 2% 2%;
+    inset: 8% 0 0;
     border-radius: 58% 42% 46% 54% / 48% 56% 44% 52%;
     background: var(--color-teal-pale);
   }
 
+  // Los tres empaques van uno al lado del otro, sin taparse, para que se lean las etiquetas.
   &__pouch {
     position: absolute;
-    width: 44%;
+    top: 20%;
+    width: 31%;
 
     &--1 {
-      top: 14%;
-      left: 2%;
-      transform: rotate(-9deg);
+      left: 1%;
+      transform: rotate(-4deg);
     }
 
     &--2 {
-      top: 14%;
-      right: 2%;
-      transform: rotate(9deg);
+      right: 1%;
+      transform: rotate(4deg);
     }
 
     &--3 {
-      top: 6%;
-      left: 26%;
+      top: 10%;
+      left: 34.5%;
       z-index: 1;
-      width: 48%;
     }
   }
 
   &__badge {
     position: absolute;
-    right: 3%;
-    bottom: 3%;
+    right: 0;
+    bottom: 0;
     z-index: 2;
     display: grid;
     place-content: center;
-    width: 30%;
+    width: 26%;
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--color-red);
@@ -116,6 +116,7 @@
 }
 
 .trust-strip {
+  padding-block: var(--space-4);
   border-block: 1px solid rgb(18 52 59 / 12%);
   background: var(--color-kraft-pale);
 
@@ -123,7 +124,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-3) var(--space-5);
-    padding-block: var(--space-4);
     font-family: var(--font-display);
     font-size: var(--text-sm);
     font-weight: 500;

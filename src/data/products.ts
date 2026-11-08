@@ -8,7 +8,7 @@ export interface Product {
   meat: { base: string; shade: string };
 }
 
-const sharedHighlights = ['Combate el sarro', 'Control del estrés', 'Sin conservantes artificiales'];
+const sharedHighlights = ['Sin conservantes artificiales'];
 
 // Para agregar un producto, sumá un objeto a esta lista y volvé a compilar.
 export const products: readonly Product[] = [

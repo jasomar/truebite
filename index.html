@@ -8,10 +8,7 @@
     <meta name="theme-color" content="#FBF6EC">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CR">
-    <meta property="og:title" content="True Bite | Premios deshidratados para mascotas">
-    <meta property="og:description" content="100% proteína, hechos en Costa Rica. El 15% de cada compra va a Rescate Animal Ara.">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://images.unsplash.com">
     <!-- @json-ld -->
   </head>
   <body>
@@ -57,9 +54,8 @@
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="container hero__grid">
           <div class="hero__copy">
-            <p class="eyebrow">Hechos en Costa Rica, para perros y gatos</p>
             <h1 class="hero__title" id="hero-title">Premios <em>100% proteína</em> que dan ganas de portarse bien</h1>
-            <p class="hero__lead">Hígado y pechuga deshidratados, sin conservantes artificiales. Y cada compra ayuda: el 15% va a {{cause-name}}.</p>
+            <p class="hero__lead">Hígado y pechuga deshidratados para perros y gatos, hechos en Costa Rica y sin conservantes artificiales. Cada compra ayuda: el 15% va a {{cause-name}}.</p>
             <div class="hero__actions" data-primary-cta>
               <a class="button button--primary button--large" href="{{whatsapp-url}}" target="_blank" rel="noopener">
                 <!-- @whatsapp-icon --><span>Pedí por WhatsApp</span>
@@ -86,7 +82,6 @@
       <section class="section products" id="productos" aria-labelledby="products-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow">Productos</p>
             <h2 class="section-head__title" id="products-title">Tres sabores, 60 gramos de felicidad</h2>
             <p class="section-head__lead">Elegí uno y el botón te abre WhatsApp con el pedido ya escrito.</p>
           </header>
@@ -97,25 +92,18 @@
         </div>
       </section>
 
-      <section class="section benefits" id="beneficios" aria-labelledby="benefits-title">
+      <section class="section benefits" id="beneficios" aria-labelledby="benefits-title" data-benefits>
         <div class="container benefits__layout">
           <div class="benefits__aside">
-            <div class="benefits__intro">
-              <p class="eyebrow">Beneficios</p>
-              <h2 class="section-head__title" id="benefits-title">Lo que dice la etiqueta, sin letra pequeña</h2>
-            </div>
-            <div class="benefits__stage" aria-hidden="true">
+            <h2 class="section-head__title" id="benefits-title">Lo que dice la etiqueta</h2>
+            <p class="benefits__lead">Cuatro razones, sin letra pequeña.</p>
+            <div class="benefits__stage" aria-hidden="true" data-benefits-stage>
               <!-- @benefit-stage -->
-            </div>
-            <div class="benefits__progress" aria-hidden="true" data-benefits-progress hidden>
-              <p class="benefits__counter" data-benefits-counter></p>
-              <div class="benefits__track"><span class="benefits__bar" data-benefits-bar></span></div>
             </div>
           </div>
           <ol class="benefits__list">
             <!-- @benefit-items -->
           </ol>
-          <p class="legal-note">Información según la etiqueta. Fotos genéricas de referencia. Los premios no sustituyen la recomendación de tu veterinario.</p>
         </div>
       </section>
 
@@ -123,7 +111,6 @@
         <div class="container cause__grid">
           <p class="cause__number" aria-hidden="true" data-reveal>15%</p>
           <div class="cause__copy" data-reveal>
-            <p class="eyebrow">La causa</p>
             <h2 class="section-head__title" id="cause-title">El 15% de cada compra va a {{cause-name}}</h2>
             <p>Tu mascota recibe un premio y un perrito rescatado recibe ayuda. No tenés que hacer nada extra: la donación sale de cada compra.</p>
             <a class="text-link" href="{{cause-url}}" target="_blank" rel="noopener">Conocé a {{cause-name}}</a>
@@ -134,7 +121,6 @@
       <section class="section order" id="pedir" aria-labelledby="order-title">
         <div class="container order__grid">
           <div data-reveal>
-            <p class="eyebrow">Cómo pedir</p>
             <h2 class="section-head__title" id="order-title">Tres pasos, sin carrito ni registro</h2>
             <ol class="steps">
               <li><span><strong>Elegí tu sabor.</strong> Uno, dos o los tres.</span></li>

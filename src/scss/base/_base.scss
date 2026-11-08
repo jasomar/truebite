@@ -48,6 +48,11 @@ ol[class] {
   list-style: none;
 }
 
+p,
+li {
+  text-wrap: pretty;
+}
+
 h1,
 h2,
 h3 {
@@ -65,6 +70,19 @@ svg {
 
 a {
   color: inherit;
+}
+
+// El gris de toque del navegador en móvil no pertenece a la marca; el foco visible
+// para teclado sigue en :focus-visible.
+a,
+button,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-teal-pale);
+  color: var(--color-ink);
 }
 
 :focus-visible {
@@ -92,14 +110,6 @@ a {
   width: 1.25em;
   height: 1.25em;
   flex: none;
-}
-
-.eyebrow {
-  margin-bottom: var(--space-3);
-  color: var(--color-teal-dark);
-  font-size: var(--text-sm);
-  font-weight: 800;
-  letter-spacing: 0.04em;
 }
 
 .skip-link {

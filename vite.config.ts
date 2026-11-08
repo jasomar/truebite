@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { renderSections } from './plugins/render-sections.ts';
+import { preloadFonts, renderSections } from './plugins/render-sections.ts';
 
 const assetFileName = (asset: { names?: string[] }): string => {
   const name = asset.names?.[0] ?? '';
@@ -9,12 +9,12 @@ const assetFileName = (asset: { names?: string[] }): string => {
 };
 
 export default defineConfig({
-  plugins: [renderSections()],
+  plugins: [renderSections(), preloadFonts()],
   build: {
     sourcemap: true,
     modulePreload: { polyfill: false },
     rolldownOptions: {
-      input: { main: 'index.html', privacidad: 'privacidad.html', terminos: 'terminos.html' },
+      input: { main: 'index.html', privacidad: 'privacidad.html', terminos: 'terminos.html', notFound: '404.html' },
       output: {
         entryFileNames: 'assets/js/[name].[hash].min.js',
         chunkFileNames: 'assets/js/[name].[hash].min.js',

@@ -7,7 +7,8 @@
     "dev": "vite",
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images": "node scripts/generate-images.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

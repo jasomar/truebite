@@ -70,12 +70,19 @@
         font-family: var(--font-display);
         font-size: 1.5rem;
         line-height: 1;
-        transition: transform 0.2s var(--ease-out);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
     }
 
-    &[open] summary::after {
+    // .is-open lo pone el script al iniciar la animación, para que el ícono gire junto
+    // con el panel y no al final. [open] cubre el caso sin JavaScript.
+    &[open] summary::after,
+    &.is-open summary::after {
       transform: rotate(45deg);
+    }
+
+    &.is-closing summary::after {
+      transform: none;
     }
 
     p {

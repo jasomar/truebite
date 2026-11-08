@@ -1,7 +1,7 @@
 @use '../tokens' as t;
 
 .legal {
-  max-width: 46rem;
+  max-width: 40rem;
   padding-block: var(--space-7) var(--space-8);
 
   &__title {
@@ -119,10 +119,34 @@
   }
 }
 
-.benefits .legal-note {
-  color: var(--color-teal-pale);
+.not-found {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+  max-width: 40rem;
+  padding-block: var(--space-8);
 
-  @include t.mq('lg') {
-    grid-column: 1 / -1;
+  &__code {
+    color: var(--color-teal-dark);
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 3rem + 10vw, 9rem);
+    font-weight: 700;
+    line-height: 0.9;
+  }
+
+  &__title {
+    font-size: var(--text-2xl);
+  }
+
+  &__text {
+    color: var(--color-muted);
+    font-size: var(--text-lg);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
   }
 }

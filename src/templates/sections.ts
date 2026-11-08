@@ -1,4 +1,5 @@
 import { benefits, type Benefit } from '../data/benefits.ts';
+import { benefitArt } from './benefit-art.ts';
 import { pendingLegalFields } from '../data/legal.ts';
 import { products, type Product } from '../data/products.ts';
 import { site } from '../data/site.ts';
@@ -33,22 +34,23 @@ const productCard = (product: Product): string => {
   </li>`;
 };
 
-const benefitItem = (benefit: Benefit, index: number): string => `<li class="benefit${index === 0 ? ' is-active' : ''}" data-benefit>
-    <div class="benefit__card">
-      <img class="benefit__photo" src="${benefit.image}" alt="" loading="lazy" decoding="async" width="900" height="600">
-      <div class="benefit__body">
-        <svg class="benefit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${benefit.icon}</svg>
-        <h3 class="benefit__title">${benefit.title}</h3>
-        <p class="benefit__text">${benefit.text}</p>
-      </div>
+const benefitItem = (benefit: Benefit): string => `<li class="benefit" data-benefit>
+    <svg class="benefit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${benefit.icon}</svg>
+    <div>
+      <h3 class="benefit__title">${benefit.title}</h3>
+      <p class="benefit__text">${benefit.text}</p>
     </div>
   </li>`;
 
+// Computadora: las imágenes se apilan y el script muestra la del beneficio actual.
+// Móvil y tablet: solo la primera, como imagen de apertura de la sección.
 const benefitStage = (): string =>
   benefits
-    .map(
-      (benefit, index) =>
-        `<img class="benefits__stage-photo${index === 0 ? ' is-active' : ''}" src="${benefit.image}" alt="" loading="lazy" decoding="async" width="900" height="600" data-benefit-photo>`,
+    .map((benefit, index) =>
+      benefitArt(benefit.art).replace(
+        'class="benefit-art"',
+        `class="benefit-art benefits__photo${index === 0 ? ' is-active' : ''}" data-benefit-photo`,
+      ),
     )
     .join('');
 
@@ -116,7 +118,7 @@ const draftNotice = (): string =>
 export const htmlSlots = {
   'hero-pouches': heroPouches,
   'product-cards': () => products.map(productCard).join(''),
-  'benefit-items': () => benefits.map(benefitItem).join(''),
+  'benefit-items': () => benefits.map((benefit) => benefitItem(benefit)).join(''),
   'benefit-stage': benefitStage,
   'json-ld': jsonLd,
   'whatsapp-icon': () => whatsappIcon,
